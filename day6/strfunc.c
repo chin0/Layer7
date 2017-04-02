@@ -57,7 +57,7 @@ int main(void)
     printf("strlen(%s) = %u\n",data,my_strlen(data));
 
     printf("input string: ");
-    scanf("%100s",buf);
+    scanf("%7s",buf);
     printf("strcmp(%s,%s) = %d\n",data,buf,my_strcmp(data, buf));
     my_strcpy(data,buf);
     printf("after strcpy(data,buf): %s\n",data);
