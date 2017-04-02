@@ -16,7 +16,7 @@ uint my_strlen(char* data)
 }
 
 /*
- * my_strcmp(char* data1, char* data2, uint len)
+ * my_strcmp(char* data1, char* data2)
  *
  * data1과 data2를 비교하여 리턴된값이
  * == 0 : 두 문자열이 같다.
