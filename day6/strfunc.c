@@ -16,7 +16,7 @@ uint my_strlen(char* data)
 }
 
 /*
- * my_strncmp(char* data1, char* data2, uint len)
+ * my_strcmp(char* data1, char* data2, uint len)
  *
  * data1과 data2를 비교하여 리턴된값이
  * == 0 : 두 문자열이 같다.
@@ -24,9 +24,9 @@ uint my_strlen(char* data)
  * < 0 : 두 문자열이 다르다 -> 다른부분의 문자가 data2이 더 크다.
  */
 
-int my_strncmp(char* data1, char* data2, uint len)
+int my_strcmp(char* data1, char* data2)
 {
-    int i,result;
+    int i,result,len = (my_strlen(data1) > my_strlen(data2)) ? my_strlen(data1) : my_strlen(data2);
     for(i=0; (result = data1[i] - data2[i]) == 0 && i < len; i++);
     return result;
 }
@@ -57,8 +57,8 @@ int main(void)
     printf("strlen(%s) = %u\n",data,my_strlen(data));
 
     printf("input string: ");
-    scanf("%7s",buf);
-    printf("strcmp(%s,%s) = %d\n",data,buf,my_strncmp(data, buf, my_strlen(data)));
+    scanf("%100s",buf);
+    printf("strcmp(%s,%s) = %d\n",data,buf,my_strcmp(data, buf));
     my_strcpy(data,buf);
     printf("after strcpy(data,buf): %s\n",data);
 }
