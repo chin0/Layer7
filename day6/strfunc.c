@@ -45,6 +45,7 @@ void my_strcpy(char* dest, char* src)
     int i;
     for(i=0; i < my_strlen(src); i++)
         dest[i] = src[i];
+    dest[my_strlen(src) - 1] = '\0';
 }
 
 
