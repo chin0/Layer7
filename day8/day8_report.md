@@ -576,14 +576,14 @@ a.y = 6;
 ```
 #include <stdio.h>
 
-typedef struct point
+struct point
 {
     int x;
     int y;
 };
 int main()
 {
-    point a = {1,2};
+    struct point a = {1,2};
     printf("%d\n",a.y);
 }
 ```
