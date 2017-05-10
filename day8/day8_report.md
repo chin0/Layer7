@@ -139,7 +139,7 @@
   ```
   int main(void)
   {
-    int a = 50, int b = 60;
+    int a = 50, b = 60;
     swap(&a,&b);
     printf("%d %d\n",a,b);
   }
